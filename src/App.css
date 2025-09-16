@@ -1,19 +1,24 @@
 .App {
-  padding: 2rem;
   background-image: url('/bkgimage.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
+
 .hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   text-align: left;
   max-width: 50%;
   font-family: 'Poppins', sans-serif;
-  margin-left: 0;
+  margin-left: 4rem;
   padding-left: 0;
 }
 
