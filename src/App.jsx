@@ -38,6 +38,12 @@ function App() {
           <h2 className="carousel-title">Our users say</h2>
           <CommentCarousel comments={comments} />
         </div>
+        <div className="new-section">
+          <div className="track-content">
+            <h2 className="track-title">Real time track</h2>
+            <p className="track-text">Track your parameters in real time<br />to make sure everything is in order.</p>
+          </div>
+        </div>
       </div>
   )
 }
