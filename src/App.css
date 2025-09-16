@@ -1,4 +1,10 @@
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-section {
   background-image: url('/bkgimage.png');
   background-size: cover;
   background-position: center top;
@@ -6,8 +12,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
-
 
 .hero-text {
   flex: 1;
@@ -20,6 +26,39 @@
   font-family: 'Poppins', sans-serif;
   margin-left: 4rem;
   padding-left: 0;
+}
+
+.comment-carousel-section {
+  min-height: 100vh;
+  background-color: #232953;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.carousel-title {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  margin-left: 4rem;
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.comment-carousel-section p {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 h1 {
