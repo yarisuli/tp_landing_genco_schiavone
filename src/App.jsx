@@ -1,6 +1,8 @@
 import './App.css'
 import Header from './components/Header'
 import CommentCarousel from './components/CommentCarousel'
+import Footer from './components/Footer'
+import GlucoseChart from './components/GlucoseChart'
 
 function App() {
   // ADD YOUR COMMENTS HERE - Easy to modify and add new ones
@@ -34,16 +36,20 @@ function App() {
             <p>you can feel</p>
           </div>
         </div>
-        <div className="comment-carousel-section">
+        <div id="comment-carousel-section" className="comment-carousel-section">
           <h2 className="carousel-title">Our users say</h2>
           <CommentCarousel comments={comments} />
         </div>
-        <div className="new-section">
+        <div id="new-section" className="new-section">
+          <div className="chart-content">
+            <GlucoseChart width={800} height={400} />
+          </div>
           <div className="track-content">
             <h2 className="track-title">Real time track</h2>
             <p className="track-text">Track your parameters in real time<br />to make sure everything is in order.</p>
           </div>
         </div>
+        <Footer />
       </div>
   )
 }

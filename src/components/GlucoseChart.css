@@ -1,0 +1,51 @@
+.glucose-chart-card {
+  font-family: Inter, sans-serif;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.glucose-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid-line {
+  stroke: #334155;
+  stroke-width: 1;
+}
+
+.glucose-line {
+  stroke: #18A0DD;
+}
+
+.glucose-point {
+  fill: #18A0DD;
+  stroke: #ffffff;
+  stroke-width: 1.6;
+}
+
+.hover-line {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.glucose-tooltip {
+  position: relative;
+  background: #0f172a;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+

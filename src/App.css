@@ -29,15 +29,15 @@
 }
 
 .comment-carousel-section {
-  min-height: 100vh;
+  min-height: 70vh;
   background-color: #232953;
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 6rem;
 }
 
 .carousel-title {
@@ -64,29 +64,65 @@
 .new-section {
   min-height: 100vh;
   background-color: #232953;
-  padding: 4rem 2rem;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  gap: 2rem;
+  margin-top: -5vh;
+}
+
+.chart-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder-chart {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.placeholder-chart h3 {
+  color: #232953;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.placeholder-chart p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .track-content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   text-align: right;
   max-width: 1200px;
   width: 100%;
+  height: 100%;
+  margin-right: 4rem;
 }
 
 .track-title {
   color: #ffffff;
   font-size: 4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  margin-right: 0;
+  margin: 0 0 0.5rem 0;
   text-align: right;
 }
 
@@ -95,7 +131,7 @@
   font-size: 1.5rem;
   font-weight: 300;
   max-width: 600px;
-  margin-right: 0;
+  margin: 0;
   text-align: right;
   line-height: 1.4;
 }
@@ -122,3 +158,4 @@ p {
   padding-left: 0;
   white-space: nowrap;
 }
+
