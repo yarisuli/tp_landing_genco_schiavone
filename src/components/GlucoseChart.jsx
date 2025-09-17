@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import "./GlucoseChart.css";
 
 function generateHourlyTimestamps(hours = 24, now = new Date()) {
@@ -47,11 +47,6 @@ export default function GlucoseChart({ hours = 24, width = 500, height = 260 }) 
     .map((v, i) => `${i === 0 ? "M" : "L"} ${xForIndex(i)} ${yForValue(v)}`)
     .join(" ");
 
-  const [hover, setHover] = useState(null);
-
-  const fmtTime = (d) => d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  const fmtDate = (d) => d.toLocaleDateString();
-
   return (
     <div className="glucose-chart-card" style={{ width }}>
       <svg viewBox={`0 0 ${width} ${height}`} className="glucose-chart-svg">
@@ -82,41 +77,10 @@ export default function GlucoseChart({ hours = 24, width = 500, height = 260 }) 
           const cx = xForIndex(i);
           const cy = yForValue(v);
           return (
-            <g
-              key={i}
-              onMouseEnter={() => setHover({ x: cx, y: cy, i })}
-              onMouseLeave={() => setHover(null)}
-            >
-              <circle cx={cx} cy={cy} r={3.6} className="glucose-point" />
-            </g>
+            <circle key={i} cx={cx} cy={cy} r={3.6} className="glucose-point" />
           );
         })}
-
-        {hover && (
-          <line
-            x1={hover.x}
-            x2={hover.x}
-            y1={padding.top}
-            y2={padding.top + innerHeight}
-            className="hover-line"
-          />
-        )}
       </svg>
-
-      {hover && (
-        <div
-          className="glucose-tooltip"
-          style={{
-            left: Math.min(width - 140, hover.x + 8),
-            top: hover.y + 6,
-          }}
-        >
-          <div className="tt-time">{fmtTime(timestamps[hover.i])}</div>
-          <div className="tt-date">{fmtDate(timestamps[hover.i])}</div>
-          <div className="tt-value">{values[hover.i]} mg/dL</div>
-        </div>
-      )}
-
     </div>
   );
 }
